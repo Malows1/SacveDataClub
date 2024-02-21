@@ -6,6 +6,7 @@ const ConnectionForm = ({ onSaveConnection }) => {
   const [method, setMethod] = useState('');
   const [number, setNumber] = useState('');
 
+  //handle the connection of savedata
   const handleSave = () => {
     onSaveConnection(method, number);
     setMethod('');
@@ -13,6 +14,7 @@ const ConnectionForm = ({ onSaveConnection }) => {
   };
 
   return (
+    
     <View style={styles.container}>
       <View >
         <Text style= {styles.title}>Club Connection</Text>
@@ -21,14 +23,14 @@ const ConnectionForm = ({ onSaveConnection }) => {
       <TextInput
         style={styles.input}
         value={method}
-        onChangeText={setMethod}
+        onChangeText={setMethod}//to call back the user input 
       />
 
       <Text style={styles.label}>Connection Number:</Text>
       <TextInput
         style={styles.input}
         value={number}
-        onChangeText={setNumber}
+        onChangeText={setNumber}//to call back the user input
         keyboardType="numeric"
       />
  
